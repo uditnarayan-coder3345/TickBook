@@ -346,13 +346,14 @@ body{
   width: 20px;
   height: 20px;
 }
-.google-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: #fff;
-    color: black;
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
 }
 .google-btn:hover {
   background: #f1f1f1;
