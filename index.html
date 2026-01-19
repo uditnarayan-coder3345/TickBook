@@ -3,125 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TickBook - Book Your Tickets Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-        <header  class="mHeader">
-            <div class="mainh">
-                 <div class="hlogo" style="background-image: url(image/logo.png);"></div>
-                 <div class="tickBook">
-                    <!-- <p>TickBook</p> -->
-                 </div>
-                 <div class="search">
-                    <div class="search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <input placeholder="  Search Movies,Theaters..." class="search-input">
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>TickBook</span>
+                </a>
+            </div>
+            
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search movies, events, plays..." class="search-input">
                 </div>
-                
-                    <div class="location">
-                        <select  class="city">
-                            <option value="Bhubaneswar">Bhubaneswar</option>
-                            <option value="Cuttack">Cuttack</option>
-                            <option value="Berhampore">Berhampore</option>
-                            <option value="Puri">Puri</option>
-                            <option value="Nayagarh">Nayagarh</option>
-                            <option value="Dhenkanal">Dhenkanal</option>
-                            <option value="Jajpur">Jajpur</option>
-                            <option value="Bhadrak">Bhadrak</option>
-                            <option value="Raurkela">Raurkela</option>
-                            <option value="Sambalpur">Sambalpur</option>
-                        </select>
-                    </div>
-                    <a href="sign.html"><button class="sin">Sign In</button></a>
-                    <div class="menu">
-                        <i class="fa-solid fa-bars"></i>
-                         <!-- &#9776 -->
-                    </div>
-                
             </div>
 
-        </header>
-        <div class="sHeader">
-        <header class="left sub">
-            
-                <p><a href="Movies.html">Movies</a></p>
-                <p><a href="Stream.html">Stream</a></p>
-                <p><a href="Events.html">Events</a></p>
-                <p><a href="Plays.html">Plays</a></p>
-                <p><a href="Sports.html">Sports</a></p>
-                <p><a href="Activities.html">Activities</a></p>
-        </header>
-        <header class="right sub">
-                <p><a href="Your Show.html">Your Show</a></p>
-                <p><a href="Offers.html">Offers</a></p>
-        </header>
-        </div>
+            <div class="location-section">
+                <i class="fas fa-map-marker-alt"></i>
+                <select class="city-selector">
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Cuttack">Cuttack</option>
+                    <option value="Berhampore">Berhampore</option>
+                    <option value="Puri">Puri</option>
+                    <option value="Nayagarh">Nayagarh</option>
+                    <option value="Dhenkanal">Dhenkanal</option>
+                    <option value="Jajpur">Jajpur</option>
+                    <option value="Bhadrak">Bhadrak</option>
+                    <option value="Raurkela">Raurkela</option>
+                    <option value="Sambalpur">Sambalpur</option>
+                </select>
+            </div>
 
-     <!--bellow header-->
-     <div class="movie">
-        
-        <div class="movie1 list">
-                <img src="image/Avatar.jpeg" alt="movie 1" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Avatar</a></div>
-                
+            <div class="user-section">
+                <a href="sign.html" class="signin-btn">Sign In</a>
+            </div>
+
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="movie2 list">
-                <img src="image/Hanuman.jpeg" alt="movie 2" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Hanuman</a></div>
+    </nav>
+
+    <!-- Category Menu -->
+    <div class="category-menu">
+        <div class="category-container">
+            <a href="#" class="category-item active">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-stream"></i>
+                <span>Stream</span>
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Events</span>
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-theater-masks"></i>
+                <span>Plays</span>
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-running"></i>
+                <span>Sports</span>
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Activities</span>
+            </a>
         </div>
-        <div class="movie3 list">
-                <img src="image/Morbious.jpeg" alt="movie 3" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Morbius</a></div>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1>Your Gateway to Entertainment</h1>
+            <p>Book tickets for movies, events, plays, and more</p>
         </div>
-        <div class="movie4 list">
-                <img src="image/Raees.jpeg" alt="movie 4" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Raees</a></div>
-        </div>
-        <div class="movie5 list">
-                <img src="image/Superman.jpeg" alt="movies 5" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Superman</a></div>
-        </div>
-        <div class="movie6 list">
-                <img src="image/johny mera naam.jpeg" alt="movies 6" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Johny Mera Naam</a></div>
-        </div>
-        <div class="movie7 list">
-                <img src="image/radhe shyam.jpeg" alt="movies 7" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Radhe Shyam</a></div>
-        </div>
-        <div class="movie8 list">
-                <img src="image/haws.jpeg" alt="movies 8" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Haws</a></div>
-        </div>
-        <div class="movie9 list">
-                <img src="image/kabir singh.jpeg" alt="movies 9" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Kabir Singh</a></div>
-        </div>
-        <div class="movie10 list">
-                <img src="image/bhola.jpeg" alt="movies 10" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Bhola</a></div>
-        </div>
-        <div class="movie11 list">
-                <img src="image/Morbious.jpeg" alt="movies 11" class="m-img">
-                <div class="caption"><a href="timing.html" class="booking">Morbius</a></div>
-        </div>
-        <div class="see-more list">
-                <p>See More</p>
-                <div class="more">
-                       <a href="AllMovies.html" class="all-movies"><i class="fa-solid fa-angle-right"></i></a> 
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Now Showing Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Now Showing</h2>
+                <a href="AllMovies.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/Avatar.jpeg" alt="Avatar">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 8.2/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Avatar</h3>
+                        <p class="movie-genre">Sci-Fi, Action</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
                 </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/Hanuman.jpeg" alt="Hanuman">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 8.5/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Hanuman</h3>
+                        <p class="movie-genre">Action, Drama</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/Morbious.jpeg" alt="Morbius">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 7.1/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Morbius</h3>
+                        <p class="movie-genre">Sci-Fi, Action</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/Raees.jpeg" alt="Raees">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 7.6/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Raees</h3>
+                        <p class="movie-genre">Drama, Action</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/Superman.jpeg" alt="Superman">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 8.0/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Superman</h3>
+                        <p class="movie-genre">Sci-Fi, Action</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/johny mera naam.jpeg" alt="Johny Mera Naam">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 7.8/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Johny Mera Naam</h3>
+                        <p class="movie-genre">Action, Comedy</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/radhe shyam.jpeg" alt="Radhe Shyam">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 7.4/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Radhe Shyam</h3>
+                        <p class="movie-genre">Romance, Drama</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/haws.jpeg" alt="Haws">
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i> 7.9/10
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Haws</h3>
+                        <p class="movie-genre">Action, Adventure</p>
+                        <a href="timing.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Coming Soon</h2>
+            </div>
+
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/kabir singh.jpeg" alt="Kabir Singh">
+                        <div class="coming-badge">Coming Soon</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Kabir Singh</h3>
+                        <p class="movie-genre">Drama, Romance</p>
+                        <button class="notify-btn">Notify Me</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="image/bhola.jpeg" alt="Bhola">
+                        <div class="coming-badge">Coming Soon</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Bhola</h3>
+                        <p class="movie-genre">Action, Thriller</p>
+                        <button class="notify-btn">Notify Me</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About TickBook</h4>
+                <p>Your ultimate destination for booking entertainment tickets online.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
-     </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TickBook. All rights reserved.</p>
+        </div>
+    </footer>
 
-     <!--Foooter-->
-     <div class="footer">
-        
-     </div>
-
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
