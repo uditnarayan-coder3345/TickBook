@@ -687,6 +687,7 @@ body {
     border: 2px solid #ddd;
     border-radius: 6px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: 600;
@@ -694,6 +695,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     color: var(--text-secondary);
+    gap: 3px;
 }
 
 .box:hover {
@@ -721,6 +723,21 @@ body {
 
 .box.booked:hover {
     transform: scale(1);
+}
+
+.seat-name {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.seat-price {
+    font-size: 10px;
+    font-weight: 600;
+    color: #e03c28;
+}
+
+.box.selected .seat-price {
+    color: #fff;
 }
 
 .booking {

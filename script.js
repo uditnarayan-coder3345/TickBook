@@ -2,24 +2,40 @@
 document.addEventListener("DOMContentLoaded", function() {
     const boxes = document.querySelectorAll(".box");
     const selectedSeatsDisplay = document.getElementById("selected-seats");
-    const selectedSeats = new Set();
+    const totalPriceDisplay = document.getElementById("total-price");
+    const selectedSeats = new Map(); // Map to store seat name and price
 
     boxes.forEach(box => {
         box.addEventListener("click", function() {
+            const seatName = this.querySelector(".seat-name").textContent;
+            const seatPrice = parseInt(this.getAttribute("data-price"));
+            
             // Toggle selection
             if(this.classList.contains("selected")) {
                 this.classList.remove("selected");
-                selectedSeats.delete(this.textContent);
+                selectedSeats.delete(seatName);
             } else if(!this.classList.contains("booked")) {
                 this.classList.add("selected");
-                selectedSeats.add(this.textContent);
+                selectedSeats.set(seatName, seatPrice);
             }
             
             // Update display
             if(selectedSeatsDisplay) {
-                selectedSeatsDisplay.textContent = selectedSeats.size > 0 
-                    ? Array.from(selectedSeats).join(", ") 
-                    : "None";
+                if(selectedSeats.size > 0) {
+                    const seatsList = Array.from(selectedSeats.keys()).join(", ");
+                    selectedSeatsDisplay.textContent = seatsList + " (" + selectedSeats.size + " seat" + (selectedSeats.size > 1 ? "s" : "") + ")";
+                } else {
+                    selectedSeatsDisplay.textContent = "None";
+                }
+            }
+            
+            // Calculate and update total price
+            if(totalPriceDisplay) {
+                let totalPrice = 0;
+                selectedSeats.forEach((price) => {
+                    totalPrice += price;
+                });
+                totalPriceDisplay.textContent = totalPrice;
             }
         });
     });
